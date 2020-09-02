@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var  a , b , c ;
+        a = parseInt(prompt("NHẬP VÀO a"));
+        b = parseInt(prompt("NHẬP VÀO b"));
+        c = parseInt(prompt("NHẬP VÀO c"));
+        var delta = b*b - 4*a*c;
+
+        if(delta == 0){
+            var x = -b/(2*a);
+            console.log("PT cÓ nghiệm kép" , x)
+        }else if(delta < 0){
+            console.log("PT vô nghiêm")
+        }else{
+            var cdelta = Math.sqrt(delta);
+            x1 = (-b + cdelta)/(2*a);
+            x2 = (-b - cdelta)/(2*a);
+            console.log("PT có nghiệm x1 =" ,x1);
+            console.log("PT có nghiệm x2 =" ,x2);
+        }
+    </script>
+</head>
+<body>
+    <h1>GIẢI PHƯƠNG TRÌNH BẬT 2</h1>
+</body>
+</html>
