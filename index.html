@@ -10,18 +10,27 @@
         b = parseInt(prompt("NHẬP VÀO b"));
         c = parseInt(prompt("NHẬP VÀO c"));
         var delta = b*b - 4*a*c;
-
-        if(delta == 0){
+        // ax2 + bx + c = 0 (a = 0)
+        if( a == 0 && b != 0 && c != 0){
+            var x = -c/b ;
+            console.log("PT có nghiệm x =" , x);
+        }else if(a == 0 && b  == 0 && c == 0){
+            console.log("PT vô nghiệm")
+        }
+        // ax2 + bx + c = 0 (a # 0)
+        else if(delta == 0 && a != 0 ){
             var x = -b/(2*a);
             console.log("PT cÓ nghiệm kép" , x)
-        }else if(delta < 0){
-            console.log("PT vô nghiêm")
-        }else{
+        }else if(delta < 0 && a != 0 ){
+            console.log("PT vô nghiêm");
+        }else if(delta > 0 && a != 0  ){
             var cdelta = Math.sqrt(delta);
             x1 = (-b + cdelta)/(2*a);
             x2 = (-b - cdelta)/(2*a);
             console.log("PT có nghiệm x1 =" ,x1);
             console.log("PT có nghiệm x2 =" ,x2);
+        }else{
+            console.log("PT vô nghiệm")
         }
     </script>
 </head>
